@@ -14,11 +14,11 @@
 	text-decoration-color: #f00;
 	text-decoration-style: dotted;
 }
-.cm-tab {
+/*.cm-tab {
 	text-decoration: line-through;
 	text-decoration-color: #404040;
 	text-decoration-style: dotted;
-}
+}*/
 .cm-s-liquibyte .CodeMirror-gutters { background-color: #262626; border-right: 1px solid #505050; padding-right: 0.8em; }
 .cm-s-liquibyte .CodeMirror-gutter-elt div { font-size: 1.2em; }
 .cm-s-liquibyte .CodeMirror-guttermarker {  }

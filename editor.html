@@ -4,7 +4,47 @@
 	<link rel=stylesheet href="vendors/CodeMirror/doc/docs.css">
 
 	<link rel="stylesheet" href="vendors/CodeMirror/lib/codemirror.css">
+
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/3024-day.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/3024-night.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/abcdef.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/ambiance.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/base16-dark.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/base16-light.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/blackboard.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/cobalt.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/colorforth.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/dracula.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/eclipse.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/elegant.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/erlang-dark.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/icecoder.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/lesser-dark.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/liquibyte.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/material.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/mbo.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/mdn-like.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/midnight.css">
 	<link rel="stylesheet" href="vendors/CodeMirror/theme/monokai.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/neat.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/neo.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/night.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/paraiso-dark.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/paraiso-light.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/pastel-on-dark.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/rubyblue.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/seti.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/solarized.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/the-matrix.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/tomorrow-night-bright.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/tomorrow-night-eighties.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/ttcn.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/twilight.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/vibrant-ink.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/xq-dark.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/xq-light.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/yeti.css">
+	<link rel="stylesheet" href="vendors/CodeMirror/theme/zenburn.css">
 
 	<script src="vendors/CodeMirror/lib/codemirror.js"></script>		
 	<script src="vendors/CodeMirror/mode/clike/clike.js"></script>
@@ -21,10 +61,12 @@
 </head>
 <body ng-controller="EditorController as ec">
 <h1 style="text-align: center"> {{ editorTitle }} Editor </h1>
-	<label>Select a language:
+<label>Language:
 	<select ng-options="item.name for item in languageOptions" ng-model="selectedLanguage" ng-change="changeLanguageMode()"></select>
-	</label>
-</p>
+</label>
+<label>Theme:
+	<select ng-options="item.name for item in themeOptions" ng-model="selectedTheme" ng-change="changeTheme()"></select>
+</label>
 <form><textarea id="texteditor">
 public class Example {
 	static Object lock = new Object();

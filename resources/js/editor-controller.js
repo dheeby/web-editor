@@ -13,9 +13,6 @@
 			mode: "text/x-java"
 		});
 
-		$scope.editorTheme = "monokai";
-		$scope.textEditorWindow.setOption("theme", $scope.editorTheme);
-
 		$scope.clearEditor = function() {
 			$scope.textEditorWindow.getDoc().setValue("");
 		};
@@ -42,6 +39,10 @@
 			$scope.textEditorWindow.setOption("mode", $scope.selectedLanguage.editor);
 		};
 
+		$scope.changeTheme = function() {
+			$scope.textEditorWindow.setOption("theme", $scope.selectedTheme.name);
+		}
+
 		$scope.languageOptions = [
 			{name : "Java", editor : "text/x-java"},
 			{name : "C", editor: "text/x-csrc"},
@@ -51,6 +52,52 @@
 		];
 
 		$scope.selectedLanguage = $scope.languageOptions[0];
+
+		$scope.themeOptions = [
+			{name : "3024-day"},
+			{name : "3024-night"},
+			{name : "abcdef"},
+			{name : "ambiance"},
+			{name : "base16-dark"},
+			{name : "base16-light"},
+			{name : "blackboard"},
+			{name : "cobalt"},
+			{name : "colorforth"},
+			{name : "dracula"},
+			{name : "eclipse"},
+			{name : "elegant"},
+			{name : "erlang-dark"},
+			{name : "icecoder"},
+			{name : "lesser-dark"},
+			{name : "liquibyte"},
+			{name : "material"},
+			{name : "mbo"},
+			{name : "mdn-like"},
+			{name : "midnight"},
+			{name : "monokai"},
+			{name : "neat"},
+			{name : "neo"},
+			{name : "night"},
+			{name : "paraiso-dark"},
+			{name : "paraiso-light"},
+			{name : "pastel-on-dark"},
+			{name : "rubyblue"},
+			{name : "seti"},
+			{name : "solarized dark"},
+			{name : "solarized light"},
+			{name : "the-matrix"},
+			{name : "tomorrow-night-bright"},
+			{name : "tomorrow-night-eighties"},
+			{name : "ttcn"},
+			{name : "twilight"},
+			{name : "vibrant-ink"},
+			{name : "xq-dark"},
+			{name : "xq-light"},
+			{name : "yeti"},
+			{name : "zenburn"}
+		];
+
+		$scope.selectedTheme = $scope.themeOptions[0];
 	});
 
 
